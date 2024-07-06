@@ -82,7 +82,7 @@ public partial class GildedRoseTest
     [InlineData(20, 10)]
     [InlineData(20, 0)]
     [InlineData(20, -1)]
-    public void UpdateQuality_OnRendomItem_Should_DecreaseSellInByOne_WhenDayEnds(
+    public void UpdateQuality_OnRandomItem_Should_DecreaseSellInByOne_WhenDayEnds(
         int quality,
         int sellIn
     )
@@ -110,7 +110,7 @@ public partial class GildedRoseTest
     [InlineData(20, 9)]
     [InlineData(20, 5)]
     [InlineData(20, 1)]
-    public void UpdateQuality_OnRendomItem_Should_DecreaseQualityByOne_WhenSellInGreaterThanZero(
+    public void UpdateQuality_OnRandomItem_Should_DecreaseQualityByOne_WhenSellInGreaterThanZero(
         int quality,
         int sellIn
     )
@@ -137,7 +137,7 @@ public partial class GildedRoseTest
     [InlineData(20, 0)]
     [InlineData(30, -1)]
     [InlineData(40, -2)]
-    public void UpdateQuality_OnRendomItem_Should_DecreaseQualityByTwo_WhenSellInIsEqualOrLessThanZero(
+    public void UpdateQuality_OnRandomItem_Should_DecreaseQualityByTwo_WhenSellInIsEqualOrLessThanZero(
         int quality,
         int sellIn
     )
@@ -164,7 +164,7 @@ public partial class GildedRoseTest
     [InlineData(0, 5)]
     [InlineData(0, 0)]
     [InlineData(0, -1)]
-    public void UpdateQuality_OnRendomItem_Should_DoesNotDecreaseQuality_WhenQualityIsZero(
+    public void UpdateQuality_OnRandomItem_Should_DoesNotDecreaseQuality_WhenQualityIsZero(
         int quality,
         int sellIn
     )
