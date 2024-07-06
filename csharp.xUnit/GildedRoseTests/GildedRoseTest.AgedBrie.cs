@@ -8,7 +8,7 @@ namespace GildedRoseTests
         #region " Aged Brie Item Test Methods "
 
         /// <summary>
-        /// Generates a random item with the given quality and sellIn values.
+        /// Generates a aged brie item with the given quality and sellIn values.
         /// </summary>
         private Item GetAgedBrieItem(
             int quality,
