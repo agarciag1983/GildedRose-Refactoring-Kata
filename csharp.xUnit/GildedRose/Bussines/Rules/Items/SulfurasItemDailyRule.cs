@@ -7,7 +7,7 @@ namespace GildedRoseKata.Bussines.Rules.Items
         public SulfurasItemDailyRule(Item item) : base(item)
         { }
 
-        public override void ApplyRule()
+        public override void Apply()
         {
             // Sulfuras never has to be sold or decreases in Quality
         }

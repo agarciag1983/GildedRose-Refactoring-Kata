@@ -7,7 +7,7 @@ namespace GildedRoseKata.Bussines.Rules.Items
         public AgedBrieItemDailyRule(Item item) : base(item)
         { }
 
-        public override void ApplyRule()
+        public override void Apply()
         {
             if (IsQuantityLessThanMaxQuality)
             {

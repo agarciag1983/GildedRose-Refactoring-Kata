@@ -18,7 +18,7 @@ public sealed class GildedRose
         foreach (var item in Items)
         {
             var itemRule = DailyRuleFactory.Create(item);
-            itemRule.ApplyRule();
+            itemRule.Apply();
         }
     }
 }

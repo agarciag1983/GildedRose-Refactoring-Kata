@@ -4,6 +4,6 @@ namespace GildedRoseKata.Bussines.Rules
 {
     internal interface IRule
     {
-        void ApplyRule();
+        void Apply();
     }
 }

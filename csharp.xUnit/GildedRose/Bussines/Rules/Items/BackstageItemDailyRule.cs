@@ -7,19 +7,19 @@ namespace GildedRoseKata.Bussines.Rules.Items
         public BackstageItemDailyRule(Item item) : base(item)
         { }
 
-        public override void ApplyRule()
+        public override void Apply()
         {
             if (IsQuantityLessThanMaxQuality)
             {
                 IncreaseQuality();
             }
 
-            if (SellIn < 11 && IsQuantityLessThanMaxQuality)
+            if (Item.SellIn < 11 && IsQuantityLessThanMaxQuality)
             {
                 IncreaseQuality();
             }
 
-            if (SellIn < 6 && IsQuantityLessThanMaxQuality)
+            if (Item.SellIn < 6 && IsQuantityLessThanMaxQuality)
             {
                 IncreaseQuality();
             }

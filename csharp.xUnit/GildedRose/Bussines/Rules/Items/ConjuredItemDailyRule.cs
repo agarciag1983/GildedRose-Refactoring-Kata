@@ -7,7 +7,7 @@ namespace GildedRoseKata.Bussines.Rules.Items
         public ConjuredItemDailyRule(Item item) : base(item)
         { }
 
-        public override void ApplyRule()
+        public override void Apply()
         {
             DecreaseQuality();
             DecreaseQuality();
