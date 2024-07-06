@@ -1,11 +1,12 @@
 ﻿using GildedRoseKata;
+using GildedRoseKata.Entities;
 using System;
 using System.Linq.Expressions;
 using Xunit;
 
 namespace GildedRoseTests;
 
-public class GildedRoseTest
+public partial class GildedRoseTest
 {
     #region " Common Update Quality Test Methods "
 
@@ -81,7 +82,7 @@ public class GildedRoseTest
     [InlineData(20, 10)]
     [InlineData(20, 0)]
     [InlineData(20, -1)]
-    public void UpdateQuality_Should_DecreaseSellInByOne_OnCustomItem_WhenDayEnds(
+    public void UpdateQuality_OnRendomItem_Should_DecreaseSellInByOne_WhenDayEnds(
         int quality,
         int sellIn
     )
@@ -109,7 +110,7 @@ public class GildedRoseTest
     [InlineData(20, 9)]
     [InlineData(20, 5)]
     [InlineData(20, 1)]
-    public void UpdateQuality_Should_DecreaseQualityByOne_OnCustomItem_WhenSellInGreaterThanZero(
+    public void UpdateQuality_OnRendomItem_Should_DecreaseQualityByOne_WhenSellInGreaterThanZero(
         int quality,
         int sellIn
     )
@@ -136,7 +137,7 @@ public class GildedRoseTest
     [InlineData(20, 0)]
     [InlineData(30, -1)]
     [InlineData(40, -2)]
-    public void UpdateQuality_Should_DecreaseQualityByTwo_OnCustomItem_WhenSellInIsEqualOrLessThanZero(
+    public void UpdateQuality_OnRendomItem_Should_DecreaseQualityByTwo_WhenSellInIsEqualOrLessThanZero(
         int quality,
         int sellIn
     )
@@ -163,7 +164,7 @@ public class GildedRoseTest
     [InlineData(0, 5)]
     [InlineData(0, 0)]
     [InlineData(0, -1)]
-    public void UpdateQuality_Should_DoesNotDecreaseQuality_OnCustomItem_WhenQualityIsZero(
+    public void UpdateQuality_OnRendomItem_Should_DoesNotDecreaseQuality_WhenQualityIsZero(
         int quality,
         int sellIn
     )
