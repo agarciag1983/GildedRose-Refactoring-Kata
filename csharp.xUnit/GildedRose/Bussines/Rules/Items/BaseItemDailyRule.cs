@@ -5,7 +5,7 @@ namespace GildedRoseKata.Bussines.Rules.Items
     internal abstract class BaseItemDailyRule : IRule
     {
         protected readonly int maxQuality = 50;
-        protected ProxyItem Item { get; }
+        protected ItemProxy Item { get; }
 
         protected bool IsSellInHasPassed => Item.SellIn < 0;
 

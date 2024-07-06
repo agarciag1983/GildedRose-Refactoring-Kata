@@ -1,41 +1,25 @@
-﻿namespace GildedRoseKata.Entities
+﻿using GildedRoseKata.Entities.Extensions;
+
+namespace GildedRoseKata.Entities
 {
-    public sealed class ProxyItem
+    public sealed class ItemProxy
     {
         private readonly Item item;
 
-        public ProxyItem(Item item)
+        public ItemProxy(Item item)
         {
             this.item = item;
         }
 
         #region " Item Set Property Methods "
 
-        public void CleanQuality()
-        {
-            item.Quality = 0;
-        }
+        public void CleanQuality() => item.CleanQuality();
 
-        public void DecreaseSellIn()
-        {
-            item.SellIn--;
-        }
+        public void DecreaseSellIn() => item.DecreaseSellIn();
 
-        public void DecreaseQuality()
-        {
-            if (item.Quality > 0)
-            {
-                item.Quality--;
-            }
-        }
+        public void DecreaseQuality() => item.DecreaseQuality();
 
-        public void IncreaseQuality(int maxQuality)
-        {
-            if (item.Quality < maxQuality)
-            {
-                item.Quality++;
-            }
-        }
+        public void IncreaseQuality(int maxQuality) => item.IncreaseQuality(maxQuality);
 
         #endregion
 
