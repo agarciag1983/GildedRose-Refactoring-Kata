@@ -1,5 +1,5 @@
-﻿using GildedRoseKata.Bussines.Rules.Items;
-using GildedRoseKata.Entities;
+﻿using GildedRoseKata.Inventory.Bussines.Strategies.Items;
+using GildedRoseKata.Inventory.Entities;
 using System.Collections.Generic;
 
 namespace GildedRoseKata;
@@ -17,7 +17,7 @@ public sealed class GildedRose
     {
         foreach (var item in Items)
         {
-            var itemRule = DailyRuleFactory.Create(item);
+            var itemRule = DailyStrategyFactory.Create(item);
             itemRule.Apply();
         }
     }

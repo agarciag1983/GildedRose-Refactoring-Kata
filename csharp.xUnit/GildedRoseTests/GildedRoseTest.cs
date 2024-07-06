@@ -1,5 +1,5 @@
 ﻿using GildedRoseKata;
-using GildedRoseKata.Entities;
+using GildedRoseKata.Inventory.Entities;
 using System;
 using System.Linq.Expressions;
 using Xunit;

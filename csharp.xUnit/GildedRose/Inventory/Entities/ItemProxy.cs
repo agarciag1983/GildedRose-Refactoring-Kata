@@ -1,6 +1,6 @@
-﻿using GildedRoseKata.Entities.Extensions;
+﻿using GildedRoseKata.Inventory.Entities.Extensions;
 
-namespace GildedRoseKata.Entities
+namespace GildedRoseKata.Inventory.Entities
 {
     public sealed class ItemProxy
     {

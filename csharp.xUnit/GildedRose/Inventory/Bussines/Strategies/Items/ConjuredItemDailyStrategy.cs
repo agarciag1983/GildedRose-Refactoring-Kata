@@ -1,10 +1,10 @@
-﻿using GildedRoseKata.Entities;
+﻿using GildedRoseKata.Inventory.Entities;
 
-namespace GildedRoseKata.Bussines.Rules.Items
+namespace GildedRoseKata.Inventory.Bussines.Strategies.Items
 {
-    internal sealed class ConjuredItemDailyRule : BaseItemDailyRule
+    internal sealed class ConjuredItemDailyStrategy : BaseItemDailyStrategy
     {
-        public ConjuredItemDailyRule(Item item) : base(item)
+        public ConjuredItemDailyStrategy(Item item) : base(item)
         { }
 
         public override void Apply()

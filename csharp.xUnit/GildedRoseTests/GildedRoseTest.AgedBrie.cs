@@ -1,4 +1,5 @@
-﻿using GildedRoseKata.Entities;
+﻿using GildedRoseKata.Inventory.Constants;
+using GildedRoseKata.Inventory.Entities;
 using Xunit;
 
 namespace GildedRoseTests

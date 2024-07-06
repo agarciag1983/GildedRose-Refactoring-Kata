@@ -1,4 +1,4 @@
-﻿namespace GildedRoseKata.Entities.Extensions
+﻿namespace GildedRoseKata.Inventory.Entities.Extensions
 {
     public static class ItemExtension
     {

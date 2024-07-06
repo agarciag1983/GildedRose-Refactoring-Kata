@@ -1,8 +1,9 @@
-﻿using GildedRoseKata.Entities;
+﻿using GildedRoseKata.Inventory.Bussines.Strategy;
+using GildedRoseKata.Inventory.Entities;
 
-namespace GildedRoseKata.Bussines.Rules.Items
+namespace GildedRoseKata.Inventory.Bussines.Strategies.Items
 {
-    internal abstract class BaseItemDailyRule : IRule
+    internal abstract class BaseItemDailyStrategy : IStrategy
     {
         protected readonly int maxQuality = 50;
         protected ItemProxy Item { get; }
@@ -10,10 +11,10 @@ namespace GildedRoseKata.Bussines.Rules.Items
         protected bool IsSellInHasPassed => Item.SellIn < 0;
 
         protected bool IsQuantityLessThanMaxQuality => Item.Quality < maxQuality;
-        
-        public BaseItemDailyRule(Item item)
+
+        public BaseItemDailyStrategy(Item item)
         {
-            Item = new (item);
+            Item = new(item);
         }
 
         protected void IncreaseQuality() => Item.IncreaseQuality(maxQuality);
