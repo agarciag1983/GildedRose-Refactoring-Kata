@@ -13,7 +13,7 @@ public partial class GildedRoseTest
     /// <summary>
     /// Check item property value after UpdateQuality method calls.
     /// </summary>
-    private void UpdateQuality_Test_Item(
+    private void Assert_Item_Property(
         Item item,
         int expectedPropertyValue,
         Expression<Func<Item, int>> evaluatePropertyExpression
@@ -33,21 +33,21 @@ public partial class GildedRoseTest
         );
     }
 
-    private void UpdateQuality_Test_Item_SellIn(
+    private void Assert_Item_SellIn(
         Item item,
         int expectedSellIn
     )
-    => UpdateQuality_Test_Item(
+    => Assert_Item_Property(
         item,
         expectedSellIn,
         item => item.SellIn
     );
 
-    private void UpdateQuality_Test_Item_Quality(
+    private void Assert_Item_Quality(
         Item item,
         int expectedQuality
     )
-    => UpdateQuality_Test_Item(
+    => Assert_Item_Property(
         item,
         expectedQuality,
         item => item.Quality
@@ -96,7 +96,7 @@ public partial class GildedRoseTest
         // Act
 
         // Assert
-        UpdateQuality_Test_Item_SellIn(
+        Assert_Item_SellIn(
             randomItem,
             sellIn - 1
         );
@@ -124,7 +124,7 @@ public partial class GildedRoseTest
         // Act
 
         // Assert
-        UpdateQuality_Test_Item_Quality(
+        Assert_Item_Quality(
             randomItem,
             quality - 1
         );
@@ -151,7 +151,7 @@ public partial class GildedRoseTest
         // Act
 
         // Assert
-        UpdateQuality_Test_Item_Quality(
+        Assert_Item_Quality(
             randomItem,
             quality - 2
         );
@@ -178,7 +178,7 @@ public partial class GildedRoseTest
         // Act
 
         // Assert
-        UpdateQuality_Test_Item_Quality(
+        Assert_Item_Quality(
             randomItem,
             0
         );

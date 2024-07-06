@@ -1,9 +1,4 @@
 ﻿using GildedRoseKata.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace GildedRoseTests
@@ -47,7 +42,7 @@ namespace GildedRoseTests
             // Act
 
             // Assert
-            UpdateQuality_Test_Item_SellIn(
+            Assert_Item_SellIn(
                 item,
                 sellIn - 1
             );
@@ -73,7 +68,7 @@ namespace GildedRoseTests
             // Act
 
             // Assert
-            UpdateQuality_Test_Item_Quality(
+            Assert_Item_Quality(
                 item,
                 quality + 1
             );
@@ -100,7 +95,7 @@ namespace GildedRoseTests
             // Act
 
             // Assert
-            UpdateQuality_Test_Item_Quality(
+            Assert_Item_Quality(
                 item,
                 quality + 2
             );
@@ -127,7 +122,7 @@ namespace GildedRoseTests
             // Act
 
             // Assert
-            UpdateQuality_Test_Item_Quality(
+            Assert_Item_Quality(
                 item,
                 quality + 3
             );
@@ -154,7 +149,7 @@ namespace GildedRoseTests
             // Act
 
             // Assert
-            UpdateQuality_Test_Item_Quality(
+            Assert_Item_Quality(
                 item,
                 0
             );

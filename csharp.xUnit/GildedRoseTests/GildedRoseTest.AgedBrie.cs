@@ -42,7 +42,7 @@ namespace GildedRoseTests
             // Act
 
             // Assert
-            UpdateQuality_Test_Item_SellIn(
+            Assert_Item_SellIn(
                 item,
                 sellIn - 1
             );
@@ -70,7 +70,7 @@ namespace GildedRoseTests
             // Act
 
             // Assert
-            UpdateQuality_Test_Item_Quality(
+            Assert_Item_Quality(
                 item,
                 quality + 1
             );
@@ -97,7 +97,7 @@ namespace GildedRoseTests
             // Act
 
             // Assert
-            UpdateQuality_Test_Item_Quality(
+            Assert_Item_Quality(
                 item,
                 quality + 2
             );
