@@ -12,7 +12,7 @@ public class Program
     {
         var argsDays = args.FirstOrDefault();
         return argsDays is not null && int.TryParse(argsDays, out int days)
-            ? days : minDays;
+            ? days + 1 : minDays;
     }
 
     public static void Main(string[] args)
@@ -27,9 +27,9 @@ public class Program
         {
             Console.WriteLine("-------- day {0} --------", day);
             Console.WriteLine("name, sellIn, quality");
-            foreach (var item in items)
+            for (var j = 0; j < items.Count; j++)
             {
-                Console.WriteLine("{0}, {1}, {2}", item.Name, item.SellIn, item.Quality);
+                Console.WriteLine(items[j].Name + ", " + items[j].SellIn + ", " + items[j].Quality);
             }
             Console.WriteLine("");
             app.UpdateQuality();
