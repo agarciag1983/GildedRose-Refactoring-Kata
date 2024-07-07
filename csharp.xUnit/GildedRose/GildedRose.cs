@@ -17,6 +17,7 @@ public sealed class GildedRose
     {
         foreach (var item in Items)
         {
+            // Create the daily strategy for the item.
             var itemRule = DailyStrategyFactory.Create(item);
             itemRule.Apply();
         }

@@ -3,6 +3,9 @@ using GildedRoseKata.Inventory.Entities;
 
 namespace GildedRoseKata.Inventory.Bussines.Strategies.Items
 {
+    /// <summary>
+    /// Define the base daily strategy for the items.
+    /// </summary>
     internal abstract class BaseItemDailyStrategy : IStrategy
     {
         protected readonly int maxQuality = 50;

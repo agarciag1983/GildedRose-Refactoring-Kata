@@ -1,5 +1,8 @@
 ﻿namespace GildedRoseKata.Inventory.Constants
 {
+    /// <summary>
+    /// Define the item names constants.
+    /// </summary>
     public static class ItemNames
     {
         public const string AgedBrie = "Aged Brie";

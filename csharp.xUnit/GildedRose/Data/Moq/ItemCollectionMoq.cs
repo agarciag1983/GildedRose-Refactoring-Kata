@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 namespace GildedRoseKata.Data.Moq
 {
+    /// <summary>
+    /// Define the item collection moq.
+    /// </summary>
     internal static class ItemCollectionMoq
     {
         public static IList<Item> GetCollection()

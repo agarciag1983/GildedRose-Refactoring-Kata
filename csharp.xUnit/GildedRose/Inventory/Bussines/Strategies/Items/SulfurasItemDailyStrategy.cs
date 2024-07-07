@@ -2,6 +2,9 @@
 
 namespace GildedRoseKata.Inventory.Bussines.Strategies.Items
 {
+    /// <summary>
+    /// Define the daily strategy for the Sulfuras item.
+    /// </summary>
     internal sealed class SulfurasItemDailyStrategy : BaseItemDailyStrategy
     {
         public SulfurasItemDailyStrategy(ItemProxy itemProxy) : base(itemProxy)

@@ -8,6 +8,9 @@ public class Program
 {
     private static int minDays = 2;
 
+    /// <summary>
+    /// Get the days from the args. Otherwise, return the minimum days.
+    /// </summary>
     private static int GetDays(string[] args)
     {
         var argsDays = args.FirstOrDefault();
@@ -19,17 +22,22 @@ public class Program
     {
         Console.WriteLine("OMGHAI!");
 
+        // Get the items collection.
         var items = ItemCollectionMoq.GetCollection();
+        
+        // Create the GildedRose app.
         var app = new GildedRose(items);
 
+        // Get the days from the args.
         int days = GetDays(args);
+
         for (var day = 0; day < days; day++)
         {
             Console.WriteLine("-------- day {0} --------", day);
             Console.WriteLine("name, sellIn, quality");
-            for (var j = 0; j < items.Count; j++)
+            foreach (var item in items)
             {
-                Console.WriteLine(items[j].Name + ", " + items[j].SellIn + ", " + items[j].Quality);
+                Console.WriteLine("{0}, {1}, {2}", item.Name, item.SellIn, item.Quality);
             }
             Console.WriteLine("");
             app.UpdateQuality();

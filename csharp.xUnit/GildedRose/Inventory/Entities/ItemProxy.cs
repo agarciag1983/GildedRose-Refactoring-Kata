@@ -2,6 +2,9 @@
 
 namespace GildedRoseKata.Inventory.Entities
 {
+    /// <summary>
+    /// Define a wrapper for the Item class to avoid exposing the Item class properties.
+    /// </summary>
     public sealed class ItemProxy
     {
         private readonly Item item;
