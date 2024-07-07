@@ -1,58 +1,43 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using GildedRoseKata.Data.Moq;
+using System;
+using System.Linq;
 
 namespace GildedRoseKata;
 
 public class Program
 {
+    private static int minDays = 2;
+
+    /// <summary>
+    /// Get the days from the args. Otherwise, return the minimum days.
+    /// </summary>
+    private static int GetDays(string[] args)
+    {
+        var argsDays = args.FirstOrDefault();
+        return argsDays is not null && int.TryParse(argsDays, out int days)
+            ? days + 1 : minDays;
+    }
+
     public static void Main(string[] args)
     {
         Console.WriteLine("OMGHAI!");
 
-        IList<Item> items = new List<Item>
-        {
-            new Item {Name = "+5 Dexterity Vest", SellIn = 10, Quality = 20},
-            new Item {Name = "Aged Brie", SellIn = 2, Quality = 0},
-            new Item {Name = "Elixir of the Mongoose", SellIn = 5, Quality = 7},
-            new Item {Name = "Sulfuras, Hand of Ragnaros", SellIn = 0, Quality = 80},
-            new Item {Name = "Sulfuras, Hand of Ragnaros", SellIn = -1, Quality = 80},
-            new Item
-            {
-                Name = "Backstage passes to a TAFKAL80ETC concert",
-                SellIn = 15,
-                Quality = 20
-            },
-            new Item
-            {
-                Name = "Backstage passes to a TAFKAL80ETC concert",
-                SellIn = 10,
-                Quality = 49
-            },
-            new Item
-            {
-                Name = "Backstage passes to a TAFKAL80ETC concert",
-                SellIn = 5,
-                Quality = 49
-            },
-            // this conjured item does not work properly yet
-            new Item {Name = "Conjured Mana Cake", SellIn = 3, Quality = 6}
-        };
-
+        // Get the items collection.
+        var items = ItemCollectionMoq.GetCollection();
+        
+        // Create the GildedRose app.
         var app = new GildedRose(items);
 
-        int days = 2;
-        if (args.Length > 0)
-        {
-            days = int.Parse(args[0]) + 1;
-        }
+        // Get the days from the args.
+        int days = GetDays(args);
 
-        for (var i = 0; i < days; i++)
+        for (var day = 0; day < days; day++)
         {
-            Console.WriteLine("-------- day " + i + " --------");
+            Console.WriteLine("-------- day {0} --------", day);
             Console.WriteLine("name, sellIn, quality");
-            for (var j = 0; j < items.Count; j++)
+            foreach (var item in items)
             {
-                Console.WriteLine(items[j].Name + ", " + items[j].SellIn + ", " + items[j].Quality);
+                Console.WriteLine("{0}, {1}, {2}", item.Name, item.SellIn, item.Quality);
             }
             Console.WriteLine("");
             app.UpdateQuality();
