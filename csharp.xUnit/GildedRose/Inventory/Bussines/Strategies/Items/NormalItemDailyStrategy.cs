@@ -4,7 +4,7 @@ namespace GildedRoseKata.Inventory.Bussines.Strategies.Items
 {
     internal sealed class NormalItemDailyStrategy : BaseItemDailyStrategy
     {
-        public NormalItemDailyStrategy(Item item) : base(item)
+        public NormalItemDailyStrategy(ItemProxy itemProxy) : base(itemProxy)
         { }
 
         public override void Apply()

@@ -8,13 +8,15 @@ namespace GildedRoseKata.Inventory.Bussines.Strategies.Items
     {
         public static IStrategy Create(Item item)
         {
+            var proxy = new ItemProxy(item);
+
             return item.Name switch
             {
-                ItemNames.AgedBrie => new AgedBrieItemDailyStrategy(item),
-                ItemNames.BackstagePasses => new BackstageItemDailyStrategy(item),
-                ItemNames.Sulfuras => new SulfurasItemDailyStrategy(item),
-                ItemNames.Conjured => new ConjuredItemDailyStrategy(item),
-                _ => new NormalItemDailyStrategy(item)
+                ItemNames.AgedBrie => new AgedBrieItemDailyStrategy(proxy),
+                ItemNames.BackstagePasses => new BackstageItemDailyStrategy(proxy),
+                ItemNames.Sulfuras => new SulfurasItemDailyStrategy(proxy),
+                ItemNames.Conjured => new ConjuredItemDailyStrategy(proxy),
+                _ => new NormalItemDailyStrategy(proxy)
             };
         }
     }

@@ -12,9 +12,9 @@ namespace GildedRoseKata.Inventory.Bussines.Strategies.Items
 
         protected bool IsQuantityLessThanMaxQuality => Item.Quality < maxQuality;
 
-        public BaseItemDailyStrategy(Item item)
+        public BaseItemDailyStrategy(ItemProxy itemProxy)
         {
-            Item = new(item);
+            Item = itemProxy;
         }
 
         protected void IncreaseQuality() => Item.IncreaseQuality(maxQuality);
